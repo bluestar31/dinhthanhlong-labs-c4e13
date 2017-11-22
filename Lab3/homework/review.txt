@@ -1,0 +1,54 @@
+1. Why should we use functions at all?
+-> Answer: 
+	- Because their primary purpose is to help us organize programs into chunks that match how we think about the problem.
+	- And with function we can reuse in other python files by import its files.
+
+2. How to define/declare a function?
+-> Answer:
+	- The syntax for a function de?nition is: 
+	def NAME( PARAMETERS ): 
+		STATEMENTS
+
+3. How to call/use a function?
+-> Answer:
+	- Function call:
+		function_name( VALUE )
+	- Example:
+		#  Function definition
+		def requiredArg (str,num):
+			print('{0} {1}'.format(str, num))
+		# Function call
+		requiredArg ('Hello', 31)
+
+4. What is return, why and how do we use it?
+-> Answer:
+	- What? return is:
+		+ It returns the flow of control to the calling function. It also returns output/results to the calling function.
+		+ Example:
+		def am_i_wrong(answer):
+    			if answer == 'yes':
+        			return True
+   		 	else:
+      		 		 return False
+	- Why? Because the return statement causes your function to exit and hand back a value to its caller.
+	- How? return_stmt:    "return" [expression_list]
+
+5. Do we have to use return in every function?
+-> Answer:
+	- No, it is not necessary. The function returns after the last line. There is no difference between a simple return and no return in some cases.
+
+6. What are function arguments, why and how we use it?
+-> Answer:
+	Most functions require arguments: the arguments provide for generalization. For example, if we want to ?nd the absolute value of a number,we have to indicate what the number is. 
+	Python has a built-in function for computing the absolute value, example:
+	>>> abs(5) 5 >>> abs(-5) 5
+	In this example, the arguments to the abs function are 5 and -5. 
+
+7. How to use function from a different file other than our currently working file?
+-> Answer:
+	- We can do this in 2 ways. First is just to import the specific function you want from file.py. To do this use:
+		from file import function. 
+	- Another way is to import the entire file.
+		import file as fl
+	- Then we can call any function inside file.py using
+		fl.function()
